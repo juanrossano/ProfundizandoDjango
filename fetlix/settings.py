@@ -13,6 +13,13 @@ import datetime
 import sys
 from pathlib import Path
 
+import django
+from django.utils.translation import gettext
+django.utils.translation.ugettext = gettext
+
+from django.utils.encoding import smart_str
+django.utils.encoding.smart_text = smart_str
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
